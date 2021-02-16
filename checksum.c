@@ -29,7 +29,7 @@ int main (int argc, char * argv[], char ** envp) {
 for (int i = 0; i < count; i++) {
     carry = 0;
     if (i == 5) {checksum = header[i]; header[i] = 0;}
-    else if (sum > 255) {carry++;}
+    if (sum > max_int + 1) {carry++;}
     else {sum = sum + header[i] + carry;}
 }
 
