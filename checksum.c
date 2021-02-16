@@ -24,6 +24,7 @@ int main (int argc, char * argv[], char ** envp) {
   byte checksum; 
   byte complement;
   byte header[count];
+  byte rd = read(0, (void *) &header, count);
 
 //for loop creating the complement
 for (int i = 0; i < count; i++) {
